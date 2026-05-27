@@ -1,0 +1,177 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#050816;
+  color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+  width:100%;
+  height:80px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:0 30px;
+
+  background:#071122;
+
+  border-bottom:2px solid #00d9ff;
+
+  box-shadow:
+  0 0 10px #00d9ff,
+  0 0 20px #00d9ff44;
+}
+
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.logo{
+  width:55px;
+  height:55px;
+
+  border-radius:50%;
+
+  background:#00d9ff;
+
+  box-shadow:
+  0 0 10px #00d9ff,
+  0 0 30px #00d9ff;
+}
+
+.site-title{
+  font-size:28px;
+  font-weight:bold;
+
+  color:#00d9ff;
+
+  text-shadow:
+  0 0 5px #00d9ff,
+  0 0 15px #00d9ff;
+}
+
+.requests{
+  font-size:18px;
+  cursor:pointer;
+
+  transition:0.2s;
+}
+
+.requests:hover{
+  color:#00d9ff;
+  text-shadow:0 0 10px #00d9ff;
+}
+
+.nav-right input{
+  width:260px;
+
+  padding:12px 18px;
+
+  border-radius:30px;
+
+  border:2px solid #00d9ff;
+
+  background:#091427;
+
+  color:white;
+
+  outline:none;
+
+  box-shadow:
+  0 0 10px #00d9ff44;
+}
+
+.nav-right input::placeholder{
+  color:#8befff;
+}
+
+/* MOVIES */
+
+.movies-container{
+  padding:40px;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit, minmax(220px, 1fr));
+
+  gap:30px;
+}
+
+.movie-card{
+  background:#0c1428;
+
+  border-radius:18px;
+
+  overflow:hidden;
+
+  border:2px solid #00d9ff33;
+
+  transition:0.25s;
+
+  cursor:pointer;
+
+  box-shadow:
+  0 0 10px #00d9ff22;
+}
+
+.movie-card:hover{
+  transform:translateY(-8px);
+
+  border-color:#00d9ff;
+
+  box-shadow:
+  0 0 15px #00d9ff,
+  0 0 30px #00d9ff66;
+}
+
+.movie-card img{
+  width:100%;
+  height:320px;
+
+  object-fit:cover;
+}
+
+.movie-info{
+  padding:15px;
+}
+
+.movie-title{
+  font-size:22px;
+
+  color:#00d9ff;
+
+  text-shadow:0 0 10px #00d9ff55;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .navbar{
+    flex-direction:column;
+    height:auto;
+    padding:20px;
+    gap:15px;
+  }
+
+  .nav-right input{
+    width:100%;
+  }
+
+}
