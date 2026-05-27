@@ -3,15 +3,15 @@
 const movies = [
 
   {
-    title: "Hail Marry",
+    title: "Project Hail Mary",
     image: "https://wsrv.nl/?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Fw780%2FwLWvHcQz7N13DvSOTV7bHgwGXpT.jpg&output=webp&q=65&n=-1",
     page: "movie/1"
   },
 
   {
-    title: "Spider-Man",
+    title: "Backrooms",
     image: "https://images.unsplash.com/photo-1635805737707-575885ab0820?q=80&w=1200&auto=format&fit=crop",
-    page: "movie/spiderman.html"
+    page: "movie/2"
   },
 
   {
