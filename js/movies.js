@@ -4,19 +4,19 @@ const movies = [
 
   {
     title: "Hail Marry",
-    image: "https://wsrv.nl/?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Fw342%2FyihdXomYb5kTeSivtFndMy5iDmf.jpg&output=webp&q=50&n=-1",
-    page: "movie/batman.html"
+    image: "https://wsrv.nl/?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Fw780%2FyihdXomYb5kTeSivtFndMy5iDmf.jpg&output=webp&q=80",
+    page: "movie/hailmarry.html"
   },
 
   {
     title: "Spider-Man",
-    image: "images/spiderman.jpg",
+    image: "https://images.unsplash.com/photo-1635805737707-575885ab0820?q=80&w=1200&auto=format&fit=crop",
     page: "movie/spiderman.html"
   },
 
   {
     title: "Avatar",
-    image: "images/avatar.jpg",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=1200&auto=format&fit=crop",
     page: "movie/avatar.html"
   }
 
@@ -31,39 +31,23 @@ document.getElementById("moviesContainer");
 
 function displayMovies(movieList){
 
-  moviesContainer.innerHTML += `
-    <a href="${movie.page}" class="movie-link">
+  // CLEAR OLD MOVIES
+  moviesContainer.innerHTML = "";
 
-      <div class="movie-card">
-
-        <img
-          src="${movie.image}"
-          alt="${movie.title}"
-          onerror="this.src='images/fallback.jpg'"
-        >
-
-        <div class="movie-info">
-
-          <div class="movie-title">
-            ${movie.title}
-          </div>
-
-        </div>
-
-      </div>
-
-    </a>
-  `;
-
+  // LOOP THROUGH MOVIES
   movieList.forEach(movie => {
 
     moviesContainer.innerHTML += `
 
-      <a href="${movie.page}">
+      <a href="${movie.page}" class="movie-link">
 
         <div class="movie-card">
 
-          <img src="${movie.image}" alt="${movie.title}">
+          <img
+            src="${movie.image}"
+            alt="${movie.title}"
+            loading="lazy"
+          >
 
           <div class="movie-info">
 
@@ -82,6 +66,10 @@ function displayMovies(movieList){
   });
 
 }
+
+
+
+// LOAD MOVIES
 
 displayMovies(movies);
 
