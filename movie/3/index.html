@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GOAT</title>
+  <link rel="stylesheet" href="/css/player.css">
+  <link rel="icon" type="image/png" href="/images/logo1.png">
+</head>
+<body>
 
+  <div class="navbar">
+    <a href="/" class="nav-left">
+    
+      <img src="/images/logo1.png" class="logo">
+
+      <div class="site-title">
+        Movie2365
+      </div>
+
+    </a>
+  </div>
+
+  <div class="player-wrapper">
+    <div class="video-container" id="videoContainer">
+
+      
+      <video id="video"
+        data-src="https://ia600407.us.archive.org/35/items/the-super-mario-galaxy-movie-2026_20260527/The%20Super%20Mario%20Galaxy%20Movie%20-%20%5B2026%5D.mp4"
+        poster="https://wsrv.nl/?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Fw780%2F6aAsTVPSsqyD2bqYfAnOdG9g4rF.jpg&output=webp&q=65&n=-1">
+      </video>
+
+      <div class="controls" id="controls">
+
+        <button id="playPause">▶</button>
+
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          class="progress"
+          id="progress"
+        >
+
+        <div class="time" id="time">
+          0:00 / 0:00
+        </div>
+
+        <button id="fullscreen">⛶</button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/js/player.js"></script>
+
+</body>
+</html>
