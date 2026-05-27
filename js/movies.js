@@ -31,7 +31,29 @@ document.getElementById("moviesContainer");
 
 function displayMovies(movieList){
 
-  moviesContainer.innerHTML = "";
+  moviesContainer.innerHTML += `
+    <a href="${movie.page}" class="movie-link">
+
+      <div class="movie-card">
+
+        <img
+          src="${movie.image}"
+          alt="${movie.title}"
+          onerror="this.src='images/fallback.jpg'"
+        >
+
+        <div class="movie-info">
+
+          <div class="movie-title">
+            ${movie.title}
+          </div>
+
+        </div>
+
+      </div>
+
+    </a>
+  `;
 
   movieList.forEach(movie => {
 
