@@ -117,7 +117,7 @@
     .time{
       font-size:14px;
       color:#ddd;
-      min-width:90px;
+      min-width:120px;
     }
 
     .video-container:fullscreen{
@@ -137,7 +137,8 @@
   <div class="player-wrapper">
     <div class="video-container" id="videoContainer">
 
-      <video id="video">
+      <!-- ✅ poster fixes black loading screen -->
+      <video id="video" poster="poster.jpg">
         <source src="https://ia600108.us.archive.org/6/items/project-hail-mary-2026_20260527/Project%20Hail%20Mary%20-%20%5B2026%5D.mp4" type="video/mp4">
       </video>
 
@@ -176,6 +177,25 @@
 
     let hideTimeout;
 
+    // ✅ better time format (supports hours)
+    const format = (t) => {
+      const hrs = Math.floor(t / 3600);
+      const mins = Math.floor((t % 3600) / 60);
+      const secs = Math.floor(t % 60).toString().padStart(2, "0");
+
+      if (isNaN(t)) return "0:00";
+
+      if (hrs > 0) {
+        return `${hrs}:${mins.toString().padStart(2, "0")}:${secs}`;
+      }
+      return `${mins}:${secs}`;
+    };
+
+    // ✅ load duration properly (fixes 0:00 / 0:00 bug)
+    video.addEventListener("loadedmetadata", () => {
+      time.textContent = `0:00 / ${format(video.duration)}`;
+    });
+
     // PLAY / PAUSE
     playPause.addEventListener("click", () => {
       if(video.paused){
@@ -194,17 +214,8 @@
 
       progress.value = percent || 0;
 
-      const format = (t) => {
-        const mins = Math.floor(t / 60);
-        const secs = Math.floor(t % 60)
-          .toString()
-          .padStart(2, "0");
-
-        return `${mins}:${secs}`;
-      };
-
       time.textContent =
-        `${format(video.currentTime)} / ${format(video.duration || 0)}`;
+        `${format(video.currentTime)} / ${format(video.duration)}`;
     });
 
     // SEEK
@@ -222,7 +233,7 @@
       }
     });
 
-    // SHOW/HIDE CONTROLS
+    // CONTROLS HIDE
     const showControls = () => {
       controls.classList.remove("hide");
 
