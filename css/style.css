@@ -37,6 +37,50 @@ body{
   gap:20px;
 }
 
+.nav-right input{
+  width:320px;
+  max-width:100%;
+
+  padding:12px 14px;
+
+  border-radius:10px; /* ← rectangle with soft corners */
+
+  border:2px solid #00d9ff;
+
+  background:#091427;
+  color:white;
+
+  outline:none;
+
+  box-shadow:
+  0 0 10px #00d9ff33;
+
+  transition:0.2s ease;
+}
+
+/* focus effect (feels more “Music2365”) */
+.nav-right input:focus{
+  border-color:#33d6ff;
+  box-shadow:
+  0 0 12px #00d9ff,
+  0 0 25px #00d9ff33;
+  transform:scale(1.02);
+}
+
+.nav-right input::placeholder{
+  color:#8befff;
+}
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+
+.navbar{
+  flex-wrap:wrap;
+}
+
 .logo{
 
   width:55px;
