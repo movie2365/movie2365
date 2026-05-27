@@ -3,8 +3,8 @@
 const movies = [
 
   {
-    title: "Batman",
-    image: "images/batman.jpg",
+    title: "Hail Marry",
+    image: "https://wsrv.nl/?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Fw342%2FyihdXomYb5kTeSivtFndMy5iDmf.jpg&output=webp&q=50&n=-1",
     page: "movie/batman.html"
   },
 
