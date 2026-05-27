@@ -9,8 +9,8 @@ const movies = [
   },
 
   {
-    title: "Backrooms",
-    image: "https://images.unsplash.com/photo-1635805737707-575885ab0820?q=80&w=1200&auto=format&fit=crop",
+    title: "The Super Mario Galaxy Movie",
+    image: "https://wsrv.nl/?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Fw780%2Fn5OWzWUgjl5r1VFbbx72cCgcj8X.jpg&output=webp&q=65&n=-1",
     page: "movie/2"
   },
 
