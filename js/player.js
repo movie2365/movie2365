@@ -1,15 +1,16 @@
 const video = document.getElementById("video");
-    const playPause = document.getElementById("playPause");
-    const progress = document.getElementById("progress");
-    const fullscreen = document.getElementById("fullscreen");
-    const controls = document.getElementById("controls");
-    const container = document.getElementById("videoContainer");
-    const time = document.getElementById("time");
+const playPause = document.getElementById("playPause");
+const progress = document.getElementById("progress");
+const fullscreen = document.getElementById("fullscreen");
+const controls = document.getElementById("controls");
+const container = document.getElementById("videoContainer");
+const time = document.getElementById("time");
 
-    const src = video.getAttribute("data-src");
-        if (src) {
-          video.src = src;
-        }
+// ✅ REQUIRED (this is what makes videos actually load)
+const src = video.getAttribute("data-src");
+    if (src) {
+        video.src = src;
+    }
 
     let hideTimeout;
 
