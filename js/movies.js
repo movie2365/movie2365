@@ -43,11 +43,15 @@ function displayMovies(movieList){
 
         <div class="movie-card">
 
-          <img
-            src="${movie.image}"
-            alt="${movie.title}"
-            loading="lazy"
-          >
+          <div class="movie-image-wrapper">
+
+            <img
+              src="${movie.image}"
+              alt="${movie.title}"
+              loading="lazy"
+            >
+
+          </div>
 
           <div class="movie-info">
 
