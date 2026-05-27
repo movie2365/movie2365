@@ -6,6 +6,11 @@ const video = document.getElementById("video");
     const container = document.getElementById("videoContainer");
     const time = document.getElementById("time");
 
+    const src = video.getAttribute("data-src");
+        if (src) {
+          video.src = src;
+        }
+
     let hideTimeout;
 
     // ✅ better time format (supports hours)
