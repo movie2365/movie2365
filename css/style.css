@@ -230,3 +230,29 @@ a{
   }
 
 }
+
+.request-btn{
+  font-size:18px;
+  font-weight:bold;
+  color:#00d9ff;
+
+  text-decoration:none;
+
+  text-shadow:
+  0 0 5px #00d9ff,
+  0 0 15px #00d9ff;
+
+  transition:0.2s;
+
+  padding:6px 10px;
+  border-radius:10px;
+}
+
+.request-btn:hover{
+  color:#33d6ff;
+  text-shadow:
+  0 0 10px #00d9ff,
+  0 0 25px #00d9ff;
+
+  transform:scale(1.05);
+}
