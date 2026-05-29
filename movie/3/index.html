@@ -1,60 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GOAT</title>
-  <link rel="stylesheet" href="/css/player.css">
-  <link rel="icon" type="image/png" href="/images/logo1.png">
-</head>
-<body>
+  <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>GOAT</title>
+    <link rel="stylesheet" href="/css/player.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="icon" type="image/png" href="/images/logo1.png">
+  </head>
+  <body>
 
-  <div class="navbar">
-    <a href="/" class="nav-left">
-    
-      <img src="/images/logo1.png" class="logo">
+    <!-- NAVBAR -->
+    <div class="navbar">
 
-      <div class="site-title">
-        Movie2365
-      </div>
+      <div class="logo-section">
+        <a href="/">
+          <img src="/images/logo1.png" alt="Logo" class="logo">
+        </a>
 
-    </a>
-  </div>
+        <div class="nav-links">
+          <a href="/" class="nav-text">
+            Movie2365
+          </a>
 
-  <div class="player-wrapper">
-    <div class="video-container" id="videoContainer">
-
-      
-      <video id="video"
-        data-src="https://ia601909.us.archive.org/14/items/goat-2026_20260527/GOAT%20-%20%5B2026%5D.mp4"
-        poster="https://wsrv.nl/?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Fw780%2F6aAsTVPSsqyD2bqYfAnOdG9g4rF.jpg&output=webp&q=65&n=-1">
-      </video>
-
-      <div class="controls" id="controls">
-
-        <button id="playPause">▶</button>
-
-        <input
-          type="range"
-          min="0"
-          max="100"
-          value="0"
-          class="progress"
-          id="progress"
-        >
-
-        <div class="time" id="time">
-          0:00 / 0:00
+          <a href="/request.html" class="nav-text">
+            Request
+          </a>
         </div>
+      </div>
+      
+    </div>
 
-        <button id="fullscreen">⛶</button>
+
+    <!-- PLAYER -->
+    <div class="player-wrapper">
+      <div class="video-container">
+
+        <iframe
+          src="https://vidcore.net/movie/1297842"
+          frameborder="0"
+          allowfullscreen
+          class="movie-frame">
+        </iframe>
 
       </div>
-
     </div>
-  </div>
 
-  <script src="/js/player.js"></script>
-
-</body>
+    <div class="player-note">
+      If the movie isn't loading switch to a different server <br> using the button on the top left of the loading screen.
+    </div>
+  </body>
 </html>
